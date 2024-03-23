@@ -1,13 +1,13 @@
 import streamlit as st
 import pandas as pd
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+from google.auth import GoogleCredentials
 from io import BytesIO
 import base64
 
 # Autenticação e acesso ao Google Drive
 scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
-creds = ServiceAccountCredentials.from_json_keyfile_name('chaveJson-inscricao.json', scope)
+creds = GoogleCredentials.from_json_keyfile_name('chaveJson-inscricao.json', scope)
 client = gspread.authorize(creds)
 
 # Abra a planilha pelo nome
