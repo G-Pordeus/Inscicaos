@@ -1,14 +1,12 @@
 import streamlit as st
 import pandas as pd
 import gspread
-from google.auth import GoogleCredentials
 from io import BytesIO
 import base64
 
 # Autenticação e acesso ao Google Drive
 scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
-creds = GoogleCredentials.from_json_keyfile_name('chaveJson-inscricao.json', scope)
-client = gspread.authorize(creds)
+client = gspread.service_account(filename='chaveJson-inscricao.json')
 
 # Abra a planilha pelo nome
 sheet = client.open('Planilhax').sheet1
