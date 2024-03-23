@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "inscricao-418021",
+  "private_key_id": "3eae3bf9e6e287fc8282785db5714fb3521ca4d0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC4xz8YpQMuN1Vr\nAAjHzY+jntVKoO8VcItRaSlA7DQo4WwVOKG1NAxSP765buxf32j2Ba6PWWe4jG6v\ni7F+FbLcbOmk/UHJbaWy1rvy5joUKtb/XiWUeiQlw898yMWpANYaGWY/0WrEvzVU\nrfyNkDPn3nMHPiCWQtSQFTi2guf5MHwv5dIIw+rr20Qt9ntPLWMv2WkCrAG4Knjs\nDdgovTp+kDve08UcLdNKV8ZS+xQ5DRhXqYd6cqag/qGA5/BHznivCKBHt+x0TTzQ\n/KgvSMUzWAFkyEEgTkYq9dg6UtnfDx1fEl9/MLVivFAdA/hiIFRmD2nWD5YxsOR0\nb+5uYxNPAgMBAAECggEAMsC/ivRgIESgmKhEwSSsLIQHD92ObfQgwDbDVwrJ9OSd\n/GI2wH/QVpMdvu9By7+go9rBrKwg+ibQjDUxhnFNVJAxyNirRjlwxuOGclxcXYe6\n0B+68MJvxVO4XQ0EhbwuErMhS6woyGvAqUa01Olj6G9IZxfgeYVXv0+k6TShpOb9\n5KTVUr5nwQDdt6fCZn6pIMiATbmgyUiEOUle6uDUuJk0SmTxW3obeLfDc+ZVJQon\nFlI+ON9Mib9K7KXekYHOFo5//cMenXEbXOm9LIE7YIr1dpMbXfOt0+xnYLvcy66H\n/LuAr/CeyHnkoH5CEEWEu2ME5SGHd6xxVpNVzSVTqQKBgQDd4GF6AYaczcwB8FZ3\nigZgGLByKz2rKDhZ/QWRJsOKNKRUkECDCaHd99Rg5nlt4QKDs0eVSTJQ4+UMVZrX\nEJ2Evfn17bu1u8EsinzvKCVsw4AzgzS+024BP2P/gjmSE8c7FajAUr0ilQVsAqNG\nyNAnXMaFAfdB6UD0dgrXZSiDNQKBgQDVMkDOhvrw3JbrxFok377ftygJ4XyNYx2T\nBqyTHgYJ3QsUGI8UnWJKTECja3xNSLTWewlEiGg0uuXkd/xudBine2jDv0wPzZWm\nzxgll0CWHlIqU7zdoSbPhyYda8EzGBmu5qbpAUj4UJWrFXVvVW0PQggjwZZAYmDg\ndrLY8D1o8wKBgQDP22j2N3+4XkOEfXdDvZaDaB3ElyXKtn80LomMldgSHYblgc4t\n9FQj8gyQStnvSiBk6Qtim5P7m8P0bi4E1Jf8x0zoS7LSafZql8K6+c01u2Da4UwE\niWZA3PX9ZC4y3zyB6aSRp/Fv+FOAAGid43q9pXiFGnZc1Pv5CKzXZPkzEQKBgQCt\n4GBukDPVgXMtMmT6sejweGaVOGvmvDGAme7hxZjTLo48g5MeEwX45pvJLH6iYWvr\niUkTtdSXPN8GKL2eL91zqvjUvQ4BzYACHeDpt6QbSvtkPgtJDoeitezmDd3yF/PK\na58xZbTnoIGQmN3AQYHC8e3Fi7tJI3MzXlubBsRu9QKBgE6KKD6bT7ZdMevrRBEL\no9H/icKaaVHoBcuB/6DsAUQFbZyl9LuS+cZDXhg1ah+IfkSX4p4uRIyJC0JKiot+\nKYRHKqv5rSxbxvKwBs+7eN7DcBVSio/cwwedgEvPia3G8xmE7cek435pgI9xJZEl\nUDkme7Nc289qsBzZYTFOW4dK\n-----END PRIVATE KEY-----\n",
+  "client_email": "acessodrive@inscricao-418021.iam.gserviceaccount.com",
+  "client_id": "112068242613377401863",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/acessodrive%40inscricao-418021.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
