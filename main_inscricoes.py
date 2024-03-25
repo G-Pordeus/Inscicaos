@@ -37,10 +37,10 @@ dadosIni = {'1ª Série - 1º A - AGROINDÚSTRIA': ['ANA LÍVIA ALVES DA SILVA',
  '1ª Série - 1º B - COMÉRCIO': ['ALINE ALVES DE GOIS', 'ANA CAROLINA FELIX DO NASCIMENTO', 'ANA JÚLIA PEREIRA DO NASCIMENTO', 'ANA RAQUELLY BARBOSA DE SOUSA', 'ANA VITÓRIA DA SILVA', 'ANDREA SOARES ALVES DA SILVA', 'ARYEL VICTOR TEOTÔNIO DA SILVA', 'EMILLY RAQUELLY FERNANDES MATIAS', 'FABIANO VIEIRA DA SILVA', 'FRANCISCO WILLIAM DE SOUSA FERREIRA', 'GAEL VICTOR MARTINS DE OLIVEIRA', 'HENRIQUE ALVES DE OLIVEIRA', 'JAMILLEY KIARA SOARES DE OLIVEIRA', 'KALLYNNY PESSOA MARTINS', 'KAROLAYNE HIGINO FERREIRA DA SILVA', 'KAUÃ BOMFIM XAVIER SANTOS', 'LARA APARECIDA PONTES DE LIMA', 'LUCAS JONATHASMOURA DA SILVA', 'LUCAS RODRIGUES DA SILVA SANTOS', 'LUCAS VINICIUS ALVES DA SILVA', 'LUIS FABIANO COURA DA SILVA', 'MARIA CLARA AFONSO DA SILVA', 'MARIA CLARA DE PAIVA ALVES', 'MARIA ELAILY COELHO PEREIRA', 'MARIANA DA COSTA SANTOS', 'MIRIAN CANDIDO DA SILVA', 'NIKOLLY RODRIGUES DA SILVA', 'RAÍ FELIPE SOARES DA SILVA', 'RHAAN PIRES DE ARAÚJO', 'SABRINA SILVA GADELHA', 'SARAH LETICIA PEREIRA DA COSTA', 'VITÓRIA DE ARAÚJO BONIFÁCIO', 'YASMIM ESTRELA EUFRÁSIO'],
  '1ª Série - 1º A - COMÉRCIO': ['01 ALISSON DORIO DA SILVA', '02 ALLAN RENATO BATISTA DA SILVA', '03 AMANDA FURTADO LACERDA', '04 ASAPH SEBASTIÃO R. DA SILVA', '05 AYSLAN FERREIRA BARBOSA GOMES', '06 BIANCA MARIANY HONORATO PEREIRA', '07 CRISLANNY LAILA ALVES DE SOUSA', '08 DAUANY CRISTINA DIOLINO PEREIRA', '09 DEISY HELLEN ALMEIDA BARROS', '10 ELLEN SAFIRA BRAGA DA SILVA', '11 EMILLI VITORIA J. DA NÓBREGA FF', '12 ERICK JUAN PEREIRA DE SOUSA FF', '13 FRANCISCO WALISSON D. JUNIOR', 'FRANCISCO ALLAN FREITAS DOS SANTOS', '14 GRAZIELLY MARCELINO DIAS FF', '15 HEITOR CAVALCANTE DIAS', '16 JAMILI QUERINO RODRIGUES', '17 FRANCISCO ALLAN FREITAS DOS SANTOS', '18 JOÃO IGOR AVELINO DE LIMA', '29 JOSÉ RUAN GONÇALVES LACERDA', '20 LUDMYLLA DE SOUSA VIEIRA', '22 MARIA EDUARDA FELIZ CUSTÓDIA', '23 MESSIAS JERÔNIMO DE SOUSA', '24 NATALIANE DA SILVA GOMES', '25 NICOLAS ARIEL FERREIRA BARBOSA FF', '26 NILSON DA CONCEIÇÃO M. DE C.', '27 PABLO GUILHERME S. FIGUEIREDO', '28 PEDRO HENRIQUE DA SILVA', '39 ROBSON PEREIRA PAZ', '30 ZACARIAS AFONSO RODRIGUES FERNANDES'],
  'TURMAS': ['1ª Série - 1º A - AGROINDÚSTRIA', '1ª Série - 1º A - COMÉRCIO', '1ª Série - 1º A - SER', '1ª Série - 1º B - COMÉRCIO'],
- 'S1 H1': ['Futsal 1', 'Audiovisual', 'Artes', 'Clube do Livro', 'Investimentos'],
- 'S1 H2': ['Vôlei 2', 'Socioemocional', 'Astronomia', 'Clube do Estudos', 'Jogos de Mesa'],
- 'S2 H1': ['Futsal 2', 'Audiovisual', 'Artes', 'Clube do Livro', 'Culinária'],
- 'S2 H2': ['Vôlei 2', 'Oratória', 'Robótica', 'Clube do Estudos', 'Jogos de Mesa']
+ 'S1 H1': [ 'Audiovisual','Futsal 1', 'Artes', 'Clube do Livro', 'Investimentos'],
+ 'S1 H2': [ 'Socioemocional','Vôlei 2', 'Astronomia', 'Clube do Estudos', 'Jogos de Mesa'],
+ 'S2 H1': ['Audiovisual','Vôlei 2', 'Artes', 'Clube do Livro', 'Culinária'],
+ 'S2 H2': [ 'Oratória', 'Futsal 2','Robótica', 'Clube do Estudos', 'Jogos de Mesa']
 }
 
 ################################################
@@ -55,19 +55,43 @@ if genre == "Inscrições - Práticas integradoras":
     SelecTurma = st.selectbox("Selecione a turma:", dadosIni["TURMAS"])
     SelecEstudante = st.selectbox("Selecione o seu nome:", dadosIni[SelecTurma])
 
+    st.write("Observação:")
+    if len(dfx[dfx["S1e3 - H6e7"]=="Futsal 1"]) - len(dfx[dfx["S2e4 - H8e9"] == "Futsal 2"]) >5 :
+        st.write("**Futsal 1** está lotada. Por favor, tente a opção **Futsal 2**!")
+    elif len(dfx[dfx["S2e4 - H8e9"] == "Futsal 2"]) -len(dfx[dfx["S1e3 - H6e7"]=="Futsal 1"]) >5 :
+        st.write("**Futsal 2** está lotada. Por favor, tente a opção **Futsal 1**!")
+    else:
+        pass
+    if len(dfx[dfx["S1e3 - H8e9"]=="Vôlei 1"]) - len(dfx[dfx["S2e4 - H6e7"] == "Vôlei 2"]) >5 :
+        st.write("**Vôlei 1** está lotada. Por favor, tente a opção **Vôlei 2**!")
+    elif len(dfx[dfx["S2e4 - H6e7"] == "Vôlei 2"]) -len(dfx[dfx["S1e3 - H8e9"]=="Vôlei 1"]) >5 :
+        st.write("**Vôlei 2** está lotada. Por favor, tente a opção **Vôlei 1**!")
+    else:
+        pass
+    st.write('Ao escolher o **Futsal 1**, não é possível se inscrever no **Futsal 2**, e vice-versa!')
+    st.write("O mesmo se aplica ao **Vôlei**.")
+    st.write("**************************************")
+
     col1, col2 = st.columns(2)
 
     with col1:
         st.header("1ª e 3ª Semana do Mês (S1e3)")
         S1_H1 = st.radio("Atividades do 6ª e 7ª horário (H6e7)", dadosIni["S1 H1"])
+        st.write("**************************************")
         S1_H2 = st.radio("Atividades do 8ª e 9ª horário (H8e9)", dadosIni["S1 H2"])
+        st.write("**************************************")
 
     with col2:
         st.header("2ª e 4ª Semana do Mês (S2e4)")
         S2_H1 = st.radio("Atividades do 6ª e 7ª horário (H6e7)", dadosIni["S2 H1"])
+        st.write("**************************************")
         S2_H2 = st.radio("Atividades do 8ª e 9ª horário (H8e9)", dadosIni["S2 H2"])
+        st.write("**************************************")
+
+
 
     if st.button("Inscrever-se!"):
+
         inscrito = {
             "Nome": [SelecEstudante],
             "Turma": [SelecTurma],
@@ -86,9 +110,9 @@ if genre == "Inscrições - Práticas integradoras":
         sheet.update([dfx.columns.values.tolist()] + dfx.values.tolist())
 
         st.write("Inscrição realizada com sucesso!")
-        st.dataframe(dfx)
+        st.dataframe(df)
+        st.write("**************************************")
 
 else:
     st.title("Outra página")
     st.title('G Pordeus...')
-
