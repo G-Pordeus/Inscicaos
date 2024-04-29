@@ -9,5 +9,6 @@ Este código é um aplicativo web desenvolvido com o Streamlit, uma ferramenta p
 5. **Página de inscrições**: Se o usuário selecionar a página "Inscrições - Práticas integradoras", ele poderá escolher a turma e o nome do estudante para realizar a inscrição em diferentes atividades nas semanas do mês.
    - Os dados são coletados através de widgets interativos como dropdowns e botões.
    - Após a inscrição, os dados são atualizados na planilha do Google Sheets e exibidos na tela.
+   - segue o link: https://inscricoes-praticas-integradoras-ect.streamlit.app/
 
 Ele também faz uso das bibliotecas `pandas` para manipulação de dados, `gspread` para acesso ao Google Sheets, e `streamlit` para construção da interface web.
